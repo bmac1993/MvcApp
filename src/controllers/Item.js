@@ -4,16 +4,14 @@ var CartItem = models.Item;
 var Items = models.Items.Items;
 
 var show = function (req, res) {
+    var data = {};
+    for (var i = 0; i < Items.length; i++) {
+        if (Items[i].name == req.params.name)
+            data = Items[i];
+    }
 
-    CartItem.ItemModel.findByName(req.params.name, function (err, docs) {
-
-        if (err) {
-            console.log(err);
-            return res.status(400).json({ error: 'An error occurred' });
-        }
-
-        res.render('item', { data: docs });
-    });
+    res.render('item', { data: data });
+   
 
 
 };
