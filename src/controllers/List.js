@@ -5,7 +5,6 @@ var ItemList = models.Items.Items;
 
 var show = function (req, res) {
         
-    console.log("test" + JSON.stringify(ItemList));
     var data = ItemList;
 
     res.render('list', { data: data });
