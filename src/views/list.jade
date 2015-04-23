@@ -17,7 +17,7 @@ block body
 				each val in data
 					tr.item
 						td.name 
-							span #{val.name}
+							a(href="/item/"+val.name) #{val.name}
 						td.price 
 							span #{val.price}
 						td
