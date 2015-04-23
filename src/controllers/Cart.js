@@ -11,6 +11,15 @@ var show = function (req, res) {
             console.log(err);
             return res.status(400).json({ error: 'An error occurred' });
         }
+        var items = data;
+        var data = {};
+        data.items = items;
+        data.total = 0;
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            data.total += item.price;
+        }
+
         console.log("return data = " + JSON.stringify(data));
         res.render('cart', { data: data });
     });

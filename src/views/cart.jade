@@ -8,17 +8,18 @@ block body
 		.navlink
 			a(href="/cart") Cart
 	section#data
+		h2 Your Cart
 		table
 			thead
 				th Name
 				th Price
-				th Add to cart
 			tbody
-				each val in data
+				each val in data.items
 					tr.item
 						td.name 
 							span #{val.name}
 						td.price 
 							span #{val.price}
+		h3 Total: #{data.total}
 block scripts
 		script(src="/assets/maker.js")
