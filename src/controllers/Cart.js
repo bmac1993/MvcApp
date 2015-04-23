@@ -1,7 +1,7 @@
 ﻿var _ = require('underscore');
 var models = require('../models');
-var CartItem = models.Item;
-var Items = models.Items;
+var CartItem = models.ItemSchema;
+var Items = models.Items.Items;
 
 var show = function (req, res) {
 
@@ -21,7 +21,7 @@ var addItem = function (req, res) {
         }
     }
 
-    var newItem = new Item.ItemModel(itemToAdd);
+    var newItem = new CartItem.ItemModel(itemToAdd);
 
     newItem.save(function (err) {
         if (err) {
