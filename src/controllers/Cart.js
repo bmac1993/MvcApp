@@ -1,6 +1,6 @@
 ﻿var _ = require('underscore');
 var models = require('../models');
-var CartItem = models.Item.ItemModel;
+var CartItem = models.Item;
 var Items = models.Items.Items;
 
 var show = function (req, res) {
