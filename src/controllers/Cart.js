@@ -12,7 +12,7 @@ var show = function (req, res) {
             return res.status(400).json({ error: 'An error occurred' });
         }
         console.log("return data = " + JSON.stringify(data));
-        res.render('list', { data: data });
+        res.render('cart', { data: data });
     });
     
 
