@@ -8,11 +8,10 @@ block body
 		.navlink
 			a(href="/cart") Cart
 	section#data
-		h2
-			${data.name}
-		p
+		h2 ${data.name}
+		p.
 			Description: ${data.description}
-		p
+		p.
 			Price: ${data.price}
 		a(href="/add/"+data.name) Add to cart
 block scripts
