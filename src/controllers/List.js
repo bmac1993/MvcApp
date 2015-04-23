@@ -1,7 +1,7 @@
 ﻿var _ = require('underscore');
 var models = require('../models');
 
-var ItemList = models.Items;
+var ItemList = models.Items.Items;
 
 var show = function (req, res) {
         
