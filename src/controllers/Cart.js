@@ -38,7 +38,7 @@ var addItem = function (req, res) {
             return res.status(400).json({ error: 'An error occurred' });
         }
 
-        res.render('cart', { data: docs });
+        show(req, res);
     });
 
 };
