@@ -31,6 +31,14 @@ ItemSchema.statics.findAll = function (callback) {
     return ItemModel.find().exec(callback);
 
 };
+ItemSchema.statics.findByName = function (name, callback) {
+
+    var search = {
+        name: name
+    };
+
+    return ItemModel.find(search).exec(callback);
+};
 
 
 ItemModel = mongoose.model('Item', ItemSchema);

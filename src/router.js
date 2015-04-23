@@ -6,6 +6,7 @@ var router = function(app) {
 
     app.get("/Cart", controllers.Cart.show);
     app.get("/list", controllers.List.show);
+    app.get("/item/:name", controllers.ItemController.show);
     app.get("/", controllers.List.show);
     app.get("/add/:name", controllers.Cart.addItem);
 };
