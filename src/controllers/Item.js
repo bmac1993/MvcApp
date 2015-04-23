@@ -9,7 +9,7 @@ var show = function (req, res) {
         if (Items[i].name == req.params.name)
             data = Items[i];
     }
-
+    console.log(JSON.stringify(data));
     res.render('item', { data: data });
    
 
