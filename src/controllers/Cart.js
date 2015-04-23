@@ -5,7 +5,7 @@ var Items = models.Items.Items;
 
 var show = function (req, res) {
 
-    var data = CartItem.findAll(function (err, data) {
+    var data = CartItem.ItemModel.findAll(function (err, data) {
 
         if (err) {
             console.log(err);
