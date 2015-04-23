@@ -23,13 +23,14 @@ var addItem = function (req, res) {
 
     var newItem = new CartItem.ItemModel(itemToAdd);
 
-    newItem.save(function (err) {
+    newItem.save(function (err, docs) {
+
         if (err) {
             console.log(err);
             return res.status(400).json({ error: 'An error occurred' });
         }
 
-        res.json({ redirect: '/list' });
+        res.render('cart', { data: docs });
     });
 
 };

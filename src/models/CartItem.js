@@ -26,9 +26,10 @@ ItemSchema.methods.toAPI = function () {
     };
 };
 
-ItemSchema.statics.findAll = function () {
+ItemSchema.statics.findAll = function (callback) {
 
-    return ItemModel.find();
+    return ItemModel.find().exec(callback);
+
 };
 
 
