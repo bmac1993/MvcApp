@@ -8,9 +8,9 @@ block body
 		.navlink
 			a(href="/cart") Cart
 	section#data
-		h2 #{data.name}
-		p Description: {data.description}
-		p Price: {data.price}
+		h2 data.name
+		p Description: data.description
+		p Price: data.price
 		a(href="/add/"+data.name) Add to cart
 block scripts
 		script(src="/assets/maker.js")
