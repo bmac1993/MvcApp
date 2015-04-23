@@ -1,18 +1,24 @@
 extends ./base.jade
 block append style
-    link(rel="stylesheet", type="text/css", href="/assets/style.css")
+	link(rel="stylesheet", type="text/css", href="/assets/style.css")
 block body
-  nav
-    a(href="/login")
-      img#logo(src="/assets/img/face.png", alt="face logo")
-    .navlink
-      a(href="/logout") Log out
-  section#items
-
-    each val in data
-        div.item
-            h3.domoName Name: #{val.name}
-            h3.domoAge Age: #{val.age}
-			input#add(type="button", value="add")
+	nav
+		.navlink
+			a(href="/list") List
+		.navlink
+			a(href="/cart") Cart
+	section#data
+		table
+			thead
+				th Name
+				th Price
+				th Add to cart
+			tbody
+				each val in data
+					tr.item
+						td.name 
+							span #{val.name}
+						td.price 
+							span #{val.price}
 block scripts
-        script(src="/assets/maker.js")
+		script(src="/assets/maker.js")
