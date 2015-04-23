@@ -1,0 +1,18 @@
+extends ./base.jade
+block append style
+	link(rel="stylesheet", type="text/css", href="/assets/style.css")
+block body
+	nav
+		.navlink
+			a(href="/list") List
+		.navlink
+			a(href="/cart") Cart
+	section#items
+
+	each val in data
+		div.item
+			h3.name Name: #{val.name}
+			h3.price Price: #{val.price}
+			a(href="/add/#{val.name}") add
+block scripts
+		script(src="/assets/maker.js")
