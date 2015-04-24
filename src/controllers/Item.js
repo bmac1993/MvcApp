@@ -11,9 +11,6 @@ var show = function (req, res) {
     }
     console.log(JSON.stringify(data));
     res.render('item', { data: data });
-   
-
-
 };
 
 module.exports.show = show;
